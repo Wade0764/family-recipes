@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Family Recipe Book</title>
+  <meta name="description" content="Our family's favorite recipes, lovingly kept.">
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/icon-180.png">
+  <link rel="icon" type="image/svg+xml" href="icons/icon.svg">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Recipes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="theme-color" content="#F3EBDD">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="app" tabindex="-1"></main>
+
+  <div id="a2hs" class="a2hs" hidden>
+    <div class="a2hs-body">
+      <span class="kicker">Keep it handy</span>
+      <strong>Add to your Home Screen</strong>
+      <span>Tap <svg class="share-ico" viewBox="0 0 24 24" aria-label="Share"><path d="M12 3v12M7 8l5-5 5 5M5 14v5a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Share, then <b>“Add to Home Screen”</b>.</span>
+    </div>
+    <button class="a2hs-close" id="a2hsClose" aria-label="Dismiss">×</button>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+  <dialog id="confirmDlg" class="sheet">
+    <form method="dialog">
+      <h2 id="confirmTitle">Delete this recipe?</h2>
+      <p id="confirmText">You can undo right after.</p>
+      <div class="row-end">
+        <button value="cancel" class="btn ghost">Keep it</button>
+        <button value="ok" class="btn danger" id="confirmOk">Delete</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog id="syncDlg" class="sheet"><div id="syncBody"></div></dialog>
+
+  <script src="config.js"></script>
+  <script src="vendor/supabase.js" defer></script>
+  <script src="parser.js" defer></script>
+  <script src="store.js" defer></script>
+  <script src="app.js" defer></script>
+</body>
+</html>
