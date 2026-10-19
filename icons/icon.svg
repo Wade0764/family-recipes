@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <radialGradient id="bg" cx="38%" cy="28%" r="85%">
+      <stop offset="0" stop-color="#C4664A"/>
+      <stop offset=".6" stop-color="#AD4D36"/>
+      <stop offset="1" stop-color="#8C3B29"/>
+    </radialGradient>
+    <linearGradient id="pageL" x1="0" x2="1">
+      <stop offset="0" stop-color="#FBF5EA"/><stop offset="1" stop-color="#EFE3CF"/>
+    </linearGradient>
+    <linearGradient id="pageR" x1="1" x2="0">
+      <stop offset="0" stop-color="#FBF5EA"/><stop offset="1" stop-color="#EFE3CF"/>
+    </linearGradient>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="22" stdDeviation="26" flood-color="#4A1E12" flood-opacity=".38"/>
+    </filter>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bg)"/>
+  <rect x="84" y="84" width="856" height="856" rx="168" fill="none" stroke="#F3E3CF" stroke-opacity=".28" stroke-width="5"/>
+  <g transform="translate(512 560) scale(1.12) translate(-512 -590)">
+  <!-- book -->
+  <g filter="url(#sh)">
+    <!-- page stack edges -->
+    <path d="M512 742 C 430 700, 300 690, 196 716 L 196 742 C 300 716, 430 726, 512 770 C 594 726, 724 716, 828 742 L 828 716 C 724 690, 594 700, 512 742 Z" fill="#E2D2B8"/>
+    <!-- left page -->
+    <path d="M512 400 C 432 350, 302 338, 196 364 L 196 716 C 302 690, 432 700, 512 742 Z" fill="url(#pageL)"/>
+    <!-- right page -->
+    <path d="M512 400 C 592 350, 722 338, 828 364 L 828 716 C 722 690, 592 700, 512 742 Z" fill="url(#pageR)"/>
+  </g>
+  <!-- spine shade -->
+  <path d="M512 400 L 512 742" stroke="#D9C6A8" stroke-width="4"/>
+  <!-- text lines left -->
+  <g stroke="#C9A98A" stroke-width="9" stroke-linecap="round" opacity=".7" fill="none">
+    <path d="M262 452 C 330 440, 400 446, 452 466"/>
+    <path d="M262 508 C 330 496, 400 502, 452 522"/>
+    <path d="M262 564 C 330 552, 400 558, 452 578"/>
+    <path d="M262 620 C 310 611, 350 613, 384 620"/>
+  </g>
+  <!-- star on right page -->
+  <path transform="translate(670 548) scale(6.4) translate(-12 -11.5)" d="M12 2.6l2.83 5.9 6.47.82-4.75 4.47 1.2 6.42L12 17.1l-5.75 3.11 1.2-6.42L2.7 9.32l6.47-.82z" fill="#C98F2E" stroke="#B47D22" stroke-width=".6" stroke-linejoin="round"/>
+  <!-- ribbon -->
+  <path d="M556 392 L 556 820 L 580 796 L 604 820 L 604 372 C 588 376, 572 383, 556 392 Z" fill="#6A6B3C"/>
+  <path d="M556 392 L 556 820 L 566 810 L 566 386 Z" fill="#000" opacity=".12"/>
+  </g>
+</svg>
